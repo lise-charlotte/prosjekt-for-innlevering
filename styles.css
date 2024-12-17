@@ -1,8 +1,49 @@
+:root {
+  --display: flex;
+  --justify-content: center;
+  --align-items: center;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+header {
+  display: var(--display);
+  justify-content: space-between;
+  align-items: var(--align-items);
+  border-bottom: 2px solid black;
+  list-style-type: none;
+}
+
+h2 {
+  display: var(--display);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+  margin: 7px;
+}
+
 section {
-  height: 100vh;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+fieldset {
+  width: 250px;
+  height: 200px;
+}
+
+fieldset > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.displayResult {
+  text-align: center;
 }

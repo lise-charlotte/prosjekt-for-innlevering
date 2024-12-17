@@ -22,25 +22,18 @@ async function getApiData () {
     console.log(data.data[4].fact);
 
     const catFact = data.data;
-    const factContainer = document.querySelector("#displayResult");
-
-
-    for (let index = 0; index < catFact.length; index++) {
-        console.log(catFact[index].fact);
-
-        const displayResult = document.createElement("displayResult");
-
-        const section = document.createElement("section");
-        section.appendChild("displayResult");
-
-    };
+    const displayResult = document.querySelector("#displayResult");
 
     function generateFact() {
         const randomIndex = Math.floor(Math.random() * catFact.length);
-        const randomFact = catFact[randomIndex];
-        document.querySelector("#displayResult") = randomFact
+        const randomFact = catFact[randomIndex].fact;
 
-    },
+        displayResult.textContent = randomFact;
+    };
+
+    const generateButton = document.querySelector("#generateButton");
+    generateButton.addEventListener("click", generateFact);
 };
+    
 
 getApiData();
