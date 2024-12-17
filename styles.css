@@ -9,6 +9,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* HEADER */
+
 header {
   display: var(--display);
   justify-content: space-between;
@@ -17,7 +19,20 @@ header {
   list-style-type: none;
 }
 
-h2 {
+nav {
+  font-size: 15px;
+  margin-right: 4px;
+}
+
+.logo {
+  max-width: 35px;
+  margin-top: 4px;
+  margin-left: 4px;
+}
+
+/* MAIN */
+
+h3 {
   display: var(--display);
   justify-content: var(--justify-content);
   align-items: var(--align-items);
@@ -35,6 +50,8 @@ section {
 fieldset {
   width: 250px;
   height: 200px;
+  border: 2px solid black;
+  border-radius: 6px;
 }
 
 fieldset > button {
@@ -44,6 +61,28 @@ fieldset > button {
   margin: auto;
 }
 
+button {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 2px;
+  transition-duration: 0.5s;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+
 .displayResult {
   text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+  display: var(--display);
+  justify-content: var(--justify-content);
+  align-items: var(--align-items);
+  font-size: 15px;
 }
